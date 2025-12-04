@@ -22,7 +22,6 @@ const warrantyPlans = [
       'Priority scheduling',
       'Annual maintenance included',
       'No service call fees',
-      '10% discount on repairs',
     ],
     popular: true,
   },
@@ -35,7 +34,6 @@ const warrantyPlans = [
       'Priority scheduling',
       'Annual maintenance included',
       'No service call fees',
-      '15% discount on repairs',
       'Transferable to new owner',
       'Extended compressor coverage',
     ],
@@ -163,6 +161,29 @@ const factoryBrands = ['York', 'Guardian', 'Daikin'];
       <p class="text-center text-gray-500 mt-8 text-sm">
         * No Worries Warranty plans are only available with new equipment purchases. Contact us for full terms and conditions.
       </p>
+    </div>
+  </section>
+
+  <!-- Maintenance Plans Link -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-secondary-900 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="text-white">
+          <h2 class="text-2xl md:text-3xl font-bold">Looking for Preventative Maintenance?</h2>
+          <p class="mt-3 text-gray-300 max-w-xl">
+            Maintenance plans can be purchased for any unit — whether we installed it or not. Keep your system running at peak performance.
+          </p>
+        </div>
+        <a
+          href="/maintenance"
+          class="inline-flex items-center gap-2 bg-white text-secondary-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex-shrink-0"
+        >
+          View Maintenance Plans
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
