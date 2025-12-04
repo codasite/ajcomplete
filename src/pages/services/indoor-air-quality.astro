@@ -1,0 +1,169 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const solutions = [
+  {
+    title: 'Ionization Systems',
+    description: 'Ionizers work by emitting negative ions, which attach to positively charged particles in the air, causing them to become heavy and fall to the ground or stick to surfaces. This process helps to reduce the amount of pollutants in the air.',
+    link: 'https://www.nucalgon.com/products/iwave-air-ionization-systems/iwave-r-air-ionization-system/',
+  },
+  {
+    title: 'Air Cleaners',
+    description: 'Air cleaners integrate with your existing system to continuously clean air while remaining out of sight. Breathe easier with elimination of up to 98% of airborne particles, including dust, allergens, bacteria, spores, and virus-sized particles.',
+    link: 'https://www.york.com/residential-equipment/indoor-air-quality/media_air_cleaners_ds',
+  },
+  {
+    title: 'Humidifiers',
+    description: 'The dehumidifier integrates with your air handler to remove water infiltration, all without the need to empty messy water trays. Control and optimize home humidity levels while reducing the conditions for mold, bacteria and virus growth.',
+    link: 'https://www.york.com/residential-equipment/indoor-air-quality/whole_house_bypass_humidifier_ds',
+  },
+];
+
+const benefits = [
+  'They help alleviate irritations associated with dry or stale air, plus bacteria and airborne viruses.',
+  'They integrate directly into your YORK® system for more efficient energy use.',
+  'Our Certified Comfort Experts make sure everything is installed and serviced correctly from day one.',
+  'They help create properly maintained humidity levels and precise, constant temperatures.',
+];
+---
+
+<Layout title="Indoor Air Quality">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold">Indoor Air Quality</h1>
+      <p class="mt-4 text-xl text-gray-200 max-w-3xl mx-auto">
+        Our clean air systems will have you loving the air you breathe
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Cleaner Air, Healthier Homes</h2>
+        <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+          Indoor air quality is about so much more than temperature. According to the Environmental Protection Agency, household air can contain two to five times the number of pollutants found in outdoor air.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Air Quality Solutions -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Air Quality Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        {solutions.map((solution) => (
+          <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-shadow">
+            <div class="w-14 h-14 bg-secondary-100 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">{solution.title}</h3>
+            <p class="text-gray-600 mb-6">{solution.description}</p>
+            <a
+              href={solution.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700"
+            >
+              Learn More
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- HVAC Air Quality Control -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">HVAC Air Quality Control</h2>
+          <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+            Make your indoor air quality the best it can be. In addition to products and solutions, find advice from our Certified Comfort Experts to help you breathe cleaner air indoors.
+          </p>
+          <a
+            href="/contact"
+            class="mt-8 inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+          >
+            Contact Us
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+        <div>
+          <img
+            src="/4900-20_0719.jpg"
+            alt="iWave air ionization system"
+            class="w-full rounded-lg shadow-xl"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-16 bg-secondary-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold">Improve Your Indoor Air Quality</h2>
+          <p class="mt-4 text-gray-300">
+            Purifying and enhancing indoor air quality can help improve the overall health of your home, and your HVAC system plays an important role.
+          </p>
+          <p class="mt-4 text-gray-300 font-medium">
+            Additional Benefits of YORK® Indoor Air Quality Products:
+          </p>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-8">
+          <ul class="space-y-4">
+            {benefits.map((benefit) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-primary-600 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold">Breathe Easier Today</h2>
+      <p class="mt-4 text-lg text-white/90">
+        Contact us to learn more about our indoor air quality solutions and how we can help improve the air in your home.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+        <a
+          href="tel:815-274-9087"
+          class="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          815-274-9087
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-lg border-2 border-white hover:bg-white/10 transition-colors"
+        >
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

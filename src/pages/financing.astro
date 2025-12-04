@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const benefits = [
+  'Fast, easy approval process',
+  'Flexible payment options',
+  'Competitive interest rates',
+  'No prepayment penalties',
+  'Simple online application',
+];
+---
+
+<Layout title="Financing">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold">Financing</h1>
+      <p class="mt-4 text-xl text-gray-200 max-w-3xl mx-auto">
+        Apply Today. Take Time to Pay.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Hassle-Free Financing</h2>
+          <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+            We now offer hassle-free financing! We have several financing programs to choose from with fast, easy approvals through Synchrony® Bank*, subject to credit approval.
+          </p>
+          <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+            Click "Apply Now" below to make efficient comfort possible.
+          </p>
+          <a
+            href="https://www.mysynchrony.com/mmc/S6219991707"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-8 inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-700 transition-colors"
+          >
+            Apply Now
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+        <div class="flex justify-center">
+          <div class="bg-secondary-50 rounded-2xl p-8 text-center max-w-sm">
+            <div class="w-20 h-20 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">Synchrony® Bank</h3>
+            <p class="text-gray-600 mt-2">Trusted financing partner for home improvement projects</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Financing Benefits</h2>
+      <div class="max-w-2xl mx-auto">
+        <ul class="space-y-4">
+          {benefits.map((benefit) => (
+            <li class="flex items-center gap-4 bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+              <div class="bg-green-100 rounded-full p-2 flex-shrink-0">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-lg text-gray-700">{benefit}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">How It Works</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-primary-600">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Apply Online</h3>
+          <p class="text-gray-600">
+            Complete the simple online application through Synchrony Bank's secure portal.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-primary-600">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Get Approved</h3>
+          <p class="text-gray-600">
+            Receive a quick decision on your application, often within minutes.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-primary-600">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Schedule Service</h3>
+          <p class="text-gray-600">
+            Once approved, contact us to schedule your HVAC installation or service.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-primary-600 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold">Ready to Get Started?</h2>
+      <p class="mt-4 text-lg text-white/90">
+        Apply for financing today and make your home comfort upgrades affordable.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+        <a
+          href="https://www.mysynchrony.com/mmc/S6219991707"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+        >
+          Apply Now
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-lg border-2 border-white hover:bg-white/10 transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+      <p class="mt-8 text-sm text-white/70">
+        *Subject to credit approval. See Synchrony Bank for terms and conditions.
+      </p>
+    </div>
+  </section>
+</Layout>

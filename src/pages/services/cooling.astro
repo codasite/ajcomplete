@@ -1,0 +1,151 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const additionalServices = [
+  {
+    title: 'Flexx Systems',
+    description: "Flexx central air conditioning units combine inverter technology and a horizontal discharge design for long-term savings and noise reduction. The sleek, compact units fit seamlessly into any décor, providing quiet and effective performance. Enjoy the benefits of personalized comfort and lower energy bills with the Flexx system's smart technology and versatile design, making it the perfect choice for modern living.",
+    link: 'https://www.greecomfort.com/our-products/flexx/',
+  },
+  {
+    title: 'Heat Pumps',
+    description: 'Heat pumps provide year-round climate control by efficiently heating and cooling your home, adapting to your needs with precision. They work by transferring heat rather than generating it, offering significant energy savings and reducing your carbon footprint. Experience the ultimate in home comfort with a system that adjusts to your lifestyle, ensuring a pleasant environment throughout every season.',
+    link: 'https://www.york.com/residential-equipment/heating-and-cooling/split-system-heat-pumps',
+  },
+  {
+    title: 'Mini-Splits',
+    description: 'For targeted comfort and energy efficiency, mini-split systems are the perfect solution. These compact and flexible units offer precise temperature control without the need for ductwork, making them ideal for both new installations and retrofits. Each mini-split system consists of an outdoor compressor and one or more indoor air handlers, allowing you to customize climate settings for different rooms or zones.',
+    link: 'https://www.mitsubishicomfort.com/products/m-series/MSZ-FS?product-details-tab=0',
+  },
+];
+---
+
+<Layout title="Cooling Services">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold">Cooling Services</h1>
+      <p class="mt-4 text-xl text-gray-200 max-w-3xl mx-auto">
+        Stay cool when it gets hot
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            At A & J Complete Service, we understand that hot temperatures demand cool homes. Our experts are here to ensure you stay comfortable with optimal cooling when you need it the most.
+          </p>
+          <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+            We are dedicated to providing comprehensive HVAC solutions to residents and businesses in La Salle, Princeton, Henry, Bureau, and Putnam, Illinois.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/Truck-In-Neighborhood.png"
+            alt="A&J Complete Service truck"
+            class="w-full rounded-lg shadow-xl"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Cooling Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Installation</h3>
+          <p class="text-gray-600">
+            From central air conditioning to ductless mini-splits, we provide expert installation services to keep your home cool and comfortable in the summer heat.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <div class="w-14 h-14 bg-secondary-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Repair</h3>
+          <p class="text-gray-600">
+            If your air conditioner is not working properly, our team can quickly identify the problem and perform the necessary repairs to restore your comfort.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Maintenance</h3>
+          <p class="text-gray-600">
+            Preventative maintenance is key to keeping your cooling system running efficiently. Trust us to perform thorough inspections and tune-ups.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Services -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Additional Cooling Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        {additionalServices.map((service) => (
+          <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+            <p class="text-gray-600 mb-6">{service.description}</p>
+            <a
+              href={service.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700"
+            >
+              Learn More
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-secondary-600 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold">Beat the Heat</h2>
+      <p class="mt-4 text-lg text-white/90">
+        Contact us today to ensure your cooling system is ready for summer.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+        <a
+          href="tel:815-274-9087"
+          class="inline-flex items-center justify-center gap-2 bg-white text-secondary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          815-274-9087
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-lg border-2 border-white hover:bg-white/10 transition-colors"
+        >
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
