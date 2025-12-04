@@ -1,0 +1,60 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Company Info -->
+      <div>
+        <img
+          src="/A-J-Heat-and-Air-logo.png"
+          alt="A&J Complete Service Corporation"
+          class="h-16 w-auto mb-4 brightness-0 invert"
+        />
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Proudly serving La Salle, Princeton, Henry, Bureau, and Putnam in Illinois for 11 years.
+        </p>
+        <a
+          href="https://www.bbb.org/us/il/tiskilwa/profile/heating-and-air-conditioning/a-j-complete-service-corp-0724-1000033573"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block mt-4"
+        >
+          <img src="/AB-seal-horz.png" alt="BBB Accredited Business" class="h-10 w-auto" />
+        </a>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+        <address class="not-italic text-gray-400 text-sm space-y-2">
+          <p>226 W Main St.</p>
+          <p>Tiskilwa, IL 61368</p>
+          <p class="pt-2">
+            <a href="tel:815-274-9087" class="hover:text-white transition-colors">
+              Tel: 815-274-9087
+            </a>
+          </p>
+        </address>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <nav class="space-y-2">
+          <a href="/" class="block text-gray-400 text-sm hover:text-white transition-colors">Home</a>
+          <a href="/about" class="block text-gray-400 text-sm hover:text-white transition-colors">About</a>
+          <a href="/services" class="block text-gray-400 text-sm hover:text-white transition-colors">Services</a>
+          <a href="/contact" class="block text-gray-400 text-sm hover:text-white transition-colors">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+      <p class="text-gray-500 text-sm">
+        &copy; {currentYear} A & J Complete Service Corp. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
