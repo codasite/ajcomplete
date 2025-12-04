@@ -41,7 +41,11 @@ const warrantyPlans = [
   },
 ];
 
-const factoryBrands = ['York', 'Guardian', 'Gree'];
+const factoryBrands = [
+  { name: 'York', logo: '/Full_Color_YORK_Logo.png' },
+  { name: 'Guardian', logo: '/Full_Color_YORK_Logo.png' },
+  { name: 'Gree', logo: '/Gree-Logo-500x281-1.webp' },
+];
 ---
 
 <Layout title="No Worries Warranty">
@@ -97,10 +101,10 @@ const factoryBrands = ['York', 'Guardian', 'Gree'];
           We offer extended service contracts for these trusted brands
         </p>
       </div>
-      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
         {factoryBrands.map((brand) => (
-          <div class="bg-white rounded-xl shadow-sm border border-gray-100 px-8 py-6">
-            <span class="text-2xl font-bold text-gray-900">{brand}</span>
+          <div class="bg-white shadow-sm border border-gray-100 px-8 py-6">
+            <img src={brand.logo} alt={brand.name} class="h-12 md:h-16 w-auto object-contain" />
           </div>
         ))}
       </div>

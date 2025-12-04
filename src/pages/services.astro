@@ -6,6 +6,8 @@ const services = [
     title: 'Heating Services',
     icon: 'heating',
     link: '/services/heating',
+    image: '/image000000 4.JPG',
+    imageAlt: 'YORK furnace installation',
     description: 'Keep your home warm and comfortable all winter long with our comprehensive heating services.',
     items: [
       'Furnace Installation',
@@ -20,6 +22,8 @@ const services = [
     title: 'Cooling Services',
     icon: 'cooling',
     link: '/services/cooling',
+    image: '/image000000.JPG',
+    imageAlt: 'Gree mini-split outdoor unit',
     description: 'Stay cool during the hot summer months with our expert air conditioning services.',
     items: [
       'AC Installation',
@@ -34,6 +38,8 @@ const services = [
     title: 'Indoor Air Quality',
     icon: 'air',
     link: '/services/indoor-air-quality',
+    image: '/Lifestyle_6045_23_YORK_HR_jpg.jpg',
+    imageAlt: 'HVAC technician servicing equipment',
     description: 'Breathe cleaner, healthier air with our indoor air quality solutions.',
     items: [
       'Ionization Systems',
@@ -48,6 +54,8 @@ const services = [
     title: 'Commercial & Restaurant',
     icon: 'refrigeration',
     link: '/services/commercial',
+    image: '/IMG_20220325_082344031_HDR-scaled.jpg',
+    imageAlt: 'Walk-in cooler refrigeration system',
     description: 'Professional refrigeration and equipment services for restaurants and commercial businesses.',
     items: [
       'Walk-in Coolers & Freezers',
@@ -83,36 +91,45 @@ const icons = {
   <section class="py-16 md:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-8">
-        {services.map((service) => (
-          <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-shadow">
-            <div class="flex items-start gap-4">
-              <div class="w-14 h-14 bg-secondary-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                <svg class="w-7 h-7 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={icons[service.icon as keyof typeof icons]} />
-              </div>
-              <div>
-                <h2 class="text-2xl font-bold text-gray-900">{service.title}</h2>
-                <p class="mt-2 text-gray-600">{service.description}</p>
-              </div>
+        {services.map((service, index) => (
+          <div class={`bg-white shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow animate-on-scroll animate-fade-up stagger-${index + 1}`}>
+            <div class="h-48 overflow-hidden">
+              <img
+                src={service.image}
+                alt={service.imageAlt}
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
             </div>
-            <ul class="mt-6 grid grid-cols-2 gap-3">
-              {service.items.map((item) => (
-                <li class="flex items-center gap-2 text-gray-700">
-                  <svg class="w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <a
-              href={service.link}
-              class="mt-6 inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700"
-            >
-              Learn More
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
+            <div class="p-8">
+              <div class="flex items-start gap-4">
+                <div class="w-14 h-14 bg-secondary-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-7 h-7 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={icons[service.icon as keyof typeof icons]} />
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold text-gray-900">{service.title}</h2>
+                  <p class="mt-2 text-gray-600">{service.description}</p>
+                </div>
+              </div>
+              <ul class="mt-6 grid grid-cols-2 gap-3">
+                {service.items.map((item) => (
+                  <li class="flex items-center gap-2 text-gray-700">
+                    <svg class="w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={service.link}
+                class="mt-6 inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 font-semibold hover:bg-primary-700 transition-colors"
+              >
+                Learn More
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
           </div>
         ))}
       </div>
