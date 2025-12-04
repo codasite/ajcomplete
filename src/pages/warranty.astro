@@ -1,0 +1,195 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const warrantyPlans = [
+  {
+    name: '1 Year',
+    price: 'Contact for pricing',
+    features: [
+      'Parts coverage',
+      'Labor coverage',
+      'Priority scheduling',
+      'Annual maintenance included',
+    ],
+    popular: false,
+  },
+  {
+    name: '3 Year',
+    price: 'Contact for pricing',
+    features: [
+      'Parts coverage',
+      'Labor coverage',
+      'Priority scheduling',
+      'Annual maintenance included',
+      'No service call fees',
+      '10% discount on repairs',
+    ],
+    popular: true,
+  },
+  {
+    name: '5 Year',
+    price: 'Contact for pricing',
+    features: [
+      'Parts coverage',
+      'Labor coverage',
+      'Priority scheduling',
+      'Annual maintenance included',
+      'No service call fees',
+      '15% discount on repairs',
+      'Transferable to new owner',
+      'Extended compressor coverage',
+    ],
+    popular: false,
+  },
+];
+
+const factoryBrands = ['York', 'Guardian', 'Daikin'];
+---
+
+<Layout title="Warranty">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold">Warranty</h1>
+      <p class="mt-4 text-xl text-gray-200 max-w-3xl mx-auto">
+        Incredible Parts and Service Warranties
+      </p>
+    </div>
+  </section>
+
+  <!-- Standard Warranty Section -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Standard Warranty
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">90-Day Warranty on All Repairs</h2>
+          <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+            You'll receive a 90-day <strong>WARRANTY</strong> on all labor and parts supplied during your repair visit. You'll also get an extended service contract on all York, Guardian, Bradford, and Daikin furnaces, air conditioners, and accessories.
+          </p>
+          <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+            With A & J Complete Service, you can trust that your heating and cooling system are in good hands, because we stand by our work. Get in touch with us today with any further questions you may have regarding <strong>WARRANTIES</strong>.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <div class="bg-secondary-50 rounded-2xl p-8 text-center">
+            <div class="text-7xl font-bold text-secondary-600">90</div>
+            <div class="text-2xl font-semibold text-gray-900 mt-2">Day Warranty</div>
+            <p class="text-gray-600 mt-2">On All Parts & Labor</p>
+            <div class="mt-6 pt-6 border-t border-secondary-200">
+              <p class="text-sm text-gray-500">Included with every service call</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Factory Authorized Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Factory-Authorized Service Provider</h2>
+        <p class="mt-4 text-lg text-gray-600">
+          We offer extended service contracts for these trusted brands
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        {factoryBrands.map((brand) => (
+          <div class="bg-white rounded-xl shadow-sm border border-gray-100 px-8 py-6">
+            <span class="text-2xl font-bold text-gray-900">{brand}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- No Worries Warranty Plans -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          New Purchase Only
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">No Worries Warranty</h2>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          Extended protection plans available exclusively with new equipment purchases. Choose the coverage that's right for you.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {warrantyPlans.map((plan) => (
+          <div class={`relative bg-white rounded-2xl shadow-sm border ${plan.popular ? 'border-primary-500 ring-2 ring-primary-500' : 'border-gray-200'} p-8`}>
+            {plan.popular && (
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                <span class="bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                  Most Popular
+                </span>
+              </div>
+            )}
+            <div class="text-center mb-6">
+              <h3 class="text-2xl font-bold text-gray-900">{plan.name}</h3>
+              <p class="text-gray-500 mt-1">Protection Plan</p>
+            </div>
+            <ul class="space-y-3 mb-8">
+              {plan.features.map((feature) => (
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-700">{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="/contact"
+              class={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${
+                plan.popular
+                  ? 'bg-primary-600 text-white hover:bg-primary-700'
+                  : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+              }`}
+            >
+              Get a Quote
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center text-gray-500 mt-8 text-sm">
+        * No Worries Warranty plans are only available with new equipment purchases. Contact us for full terms and conditions.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-primary-600 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold">Questions About Our Warranties?</h2>
+      <p class="mt-4 text-lg text-white/90">
+        Contact us today to learn more about our warranty options and find the right coverage for your needs.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+        <a
+          href="tel:815-274-9087"
+          class="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          815-274-9087
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-lg border-2 border-white hover:bg-white/10 transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
