@@ -119,16 +119,18 @@ const services = [
   <!-- Services Section -->
   <section class="py-16 md:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
+      <div class="text-center mb-12 animate-on-scroll animate-fade-up">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Services</h2>
         <p class="mt-4 text-lg text-gray-600">Complete HVAC solutions for residential and commercial properties</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {services.map((service) => (
-          <ServiceCard {...service} />
+        {services.map((service, index) => (
+          <div class={`animate-on-scroll animate-fade-up stagger-${index + 1}`}>
+            <ServiceCard {...service} />
+          </div>
         ))}
       </div>
-      <div class="text-center mt-10 flex flex-col sm:flex-row justify-center gap-4">
+      <div class="text-center mt-10 flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
         <a
           href="/services"
           class="inline-flex items-center gap-2 bg-secondary-600 text-white px-8 py-4 font-semibold hover:bg-secondary-700 transition-colors"
@@ -145,6 +147,15 @@ const services = [
           Maintenance Plans
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </a>
+        <a
+          href="/warranty"
+          class="inline-flex items-center gap-2 bg-secondary-900 text-white px-8 py-4 font-semibold hover:bg-secondary-800 transition-colors"
+        >
+          No Worries Warranty
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
           </svg>
         </a>
       </div>
@@ -182,13 +193,15 @@ const services = [
   <!-- Rebates Section -->
   <section class="py-16 md:py-24 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
+      <div class="text-center mb-12 animate-on-scroll animate-fade-up">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Available Rebates & Savings</h2>
         <p class="mt-4 text-lg text-gray-600">Take advantage of these money-saving opportunities</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {rebates.map((rebate) => (
-          <RebateCard {...rebate} />
+        {rebates.map((rebate, index) => (
+          <div class={`animate-on-scroll animate-fade-up stagger-${index + 1}`}>
+            <RebateCard {...rebate} />
+          </div>
         ))}
       </div>
     </div>
@@ -197,10 +210,10 @@ const services = [
   <!-- Brands Section -->
   <section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">Brands We Trust</h2>
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10 animate-on-scroll animate-fade-up">Brands We Trust</h2>
       <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-        {brands.map((brand) => (
-          <img src={brand.src} alt={brand.alt} class="h-12 md:h-16 w-auto object-contain" />
+        {brands.map((brand, index) => (
+          <img src={brand.src} alt={brand.alt} class={`h-12 md:h-16 w-auto object-contain animate-on-scroll animate-scale stagger-${index + 1}`} />
         ))}
       </div>
     </div>
@@ -210,8 +223,8 @@ const services = [
   <section class="py-16 md:py-24 bg-secondary-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-bold">Industry-Leading Warranties</h2>
+        <div class="animate-on-scroll animate-fade-left">
+          <h2 class="text-3xl md:text-4xl font-bold">No Worries Warranty</h2>
           <p class="mt-6 text-lg text-gray-300 leading-relaxed">
             We offer a 90-day warranty on all parts and labor. Your satisfaction is our priority, and we stand behind every job we complete.
           </p>
@@ -222,7 +235,7 @@ const services = [
             Learn More About Our Warranty
           </a>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center animate-on-scroll animate-fade-right">
           <div class="bg-white/10 p-8 rounded-2xl backdrop-blur">
             <div class="text-center">
               <div class="text-6xl font-bold text-primary-500">90</div>
